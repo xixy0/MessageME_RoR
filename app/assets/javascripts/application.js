@@ -16,5 +16,12 @@
 //= require_tree .
 
 // Loads all Semantic javascripts
-//= require semantic-ui
 //= require jquery
+//= require jquery_ujs
+//= require semantic-ui
+
+
+$(document).on('turbolinks:load', function() {
+  $('.ui.dropdown').dropdown('destroy');
+  $('.ui.dropdown').dropdown();
+});
